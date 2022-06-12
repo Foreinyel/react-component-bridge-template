@@ -18,7 +18,7 @@ export const Bridge = (props: any) => {
     });
   }, []);
 
-  const Component = ref.current;
+  const Component = ref.current as unknown as React.FC;;
 
   return loaded && Component ? <Component {...props} /> : null;
 };
