@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 const useCustomLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
-const load = (function () {
-  return System.import("{{ resourceUrl }}");
-})();
+const load = System.import("{{ resourceUrl }}");
 
 export interface BridgeProps {}
 
